@@ -1,6 +1,6 @@
 import "server-only";
 // Transactional email (RSVP confirmations) through Resend's HTTP API. No extra package needed.
-// Env: RESEND_API_KEY (secret), EMAIL_FROM e.g. "Moona <hello@moona.ng>" (domain must be verified in Resend).
+// Env: RESEND_API_KEY (secret) and EMAIL_FROM (sender on a verified Resend domain).
 // If the key isn't set (demo / local), emails are skipped and the RSVP still succeeds.
 import type { EventVM } from "@/lib/types";
 import { fmt, timeLabel, tzShort, KINDS } from "@/lib/core";
